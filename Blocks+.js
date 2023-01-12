@@ -466,6 +466,20 @@
         "---",
         
         {
+          opcode: 'tst',
+          blockType: Scratch.BlockType.COMMAND,
+          text: '页面输出 [t]',
+          arguments: {
+            t: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: '这是一串字符'
+            },
+          }
+        },
+					
+        "---",
+        
+        {
           opcode: 'Console1',
           blockType: Scratch.BlockType.COMMAND,
           text: '控制台日志 [a]',
@@ -729,6 +743,9 @@
     return LEFT ^ RIGHT;
   }
 
+  tst(args) {
+    document.write( args.t )
+  }
   }
   Scratch.extensions.register(new StrictEqualityExtension());
 })(Scratch);
