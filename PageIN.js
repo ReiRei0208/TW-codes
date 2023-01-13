@@ -1,3 +1,4 @@
+(function(Scratch) {
 class StrictEqualityExtension {
 	getInfo() {
 	  return {
@@ -193,7 +194,7 @@ class StrictEqualityExtension {
     ain(args) {
         window.open(args.a);
   }
-  aget (args) {
+  async aget (args) {
         try {
             const r = await fetch(args.URL);
             return await r.text();
@@ -239,3 +240,4 @@ class StrictEqualityExtension {
   }
 }
 Scratch.extensions.register(new StrictEqualityExtension());
+})(Scratch);
